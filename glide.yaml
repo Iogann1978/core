@@ -1,0 +1,61 @@
+package: .
+import:
+- package: github.com/go-chi/chi
+- package: github.com/golang/protobuf
+  subpackages:
+  - proto
+- package: github.com/hyperledger/fabric-sdk-go
+  subpackages:
+  - api/apifabca
+  - api/apifabclient
+  - api/apitxn
+  - def/fabapi
+  - def/fabapi/opt
+  - pkg/fabric-client/events
+  - pkg/fabric-client/orderer
+  - pkg/fabric-txn/chclient
+  - third_party/github.com/hyperledger/fabric/protos/common
+  - third_party/github.com/hyperledger/fabric/protos/peer
+- package: github.com/hyperledger/fabric
+  subpackages:
+  - core/chaincode/shim
+  - protos/msp
+  - protos/peer
+- package: github.com/labstack/echo
+- package: github.com/sirupsen/logrus
+- package: go.uber.org/zap
+  subpackages:
+  - zapcore
+- package: s7ab-platform-hyperledger/platform/core
+  subpackages:
+  - api/common
+  - api/member/entities
+  - api/member/handlers
+  - api/member/helpers
+  - chaincode
+  - chaincode/base
+  - chaincode/base/extensions
+  - chaincode/base/extensions/creator
+  - chaincode/base/extensions/owner
+  - chaincode/base/extensions/router
+  - chaincodes
+  - configtxlator
+  - entities
+  - logger
+  - observer
+  - observer/util
+  - utils
+- package: s7ab-platform-hyperledger/platform/s7ticket/api/tickets/entities
+- package: s7ab-platform-hyperledger/platform/s7ticket/entities
+testImport:
+- package: github.com/go-test/deep
+- package: github.com/onsi/ginkgo
+- package: github.com/onsi/gomega
+- package: github.com/smartystreets/goconvey
+  subpackages:
+  - convey
+- package: github.com/stretchr/testify
+  subpackages:
+  - assert
+- package: s7ab-platform-hyperledger/platform/s7platform/testing
+- package: s7ab-platform-hyperledger/platform/s7platform/tests/fixture
